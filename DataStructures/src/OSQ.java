@@ -1,4 +1,4 @@
-public interface DataStructure <T>{
+public interface OSQ<T>{
     void push(T obj);
     T poll();
 

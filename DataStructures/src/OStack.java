@@ -1,4 +1,4 @@
-public class OStack<T> implements DataStructure<T>{
+public class OStack<T> implements OSQ<T> {
 
     private T[] arr;
 

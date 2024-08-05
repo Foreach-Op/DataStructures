@@ -1,4 +1,4 @@
-public class OQueue<T> implements DataStructure<T>{
+public class OQueue<T> implements OSQ<T> {
 
     /*
     A Queue implementation with the circular array methodology.
