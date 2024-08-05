@@ -5,9 +5,8 @@ public class OQueue<T> implements OSQ<T> {
     It is a storage friend approach.
      */
     private T[] arr;
-
-    private int initializationSize;
-    private int sizeIncreaseScale;
+    private int initializationSize = 10;
+    private int sizeIncreaseScale = 2;
     private int size = 0;
     private int head = -1;
     private int tail = 0;

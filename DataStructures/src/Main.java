@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        OLinkedListTest();
+        OArrayListTest();
     }
 
     private static void OStackTest(){
@@ -54,6 +54,51 @@ public class Main {
             System.out.println(dt.poll());
         }
         System.out.println(dt.size());
+    }
+
+    private static void OArrayListTest(){
+        OCollection<Integer> dt= new OArrayList<>();
+        dt.printAll();
+        for (int i = 0; i < 10; i++) {
+            dt.add(i);
+        }
+        System.out.println(dt.size());
+        dt.printAll();
+        System.out.println(dt.remove(9));
+        System.out.println(dt.remove(8));
+        System.out.println(dt.remove(1));
+        System.out.println(dt.remove(0));
+        System.out.println(dt.remove(3));
+        dt.printAll();
+
+        dt.add(0);
+        dt.add(0,0);
+        dt.add(0,-1);
+        dt.add(1,-2);
+        dt.add(1,-2);
+        dt.add(1,-2);
+        dt.add(10,-20);
+        dt.addFirst(667);
+        dt.addFirst(666);
+        System.out.println(dt.size());
+        dt.printAll();
+        System.out.println(dt.get(0));
+        System.out.println(dt.get(12));
+        System.out.println(dt.get(6));
+        System.out.println(dt.get(13));
+        dt.printAll();
+        System.out.println(dt.find(-2));
+        System.out.println(dt.find(0));
+        System.out.println(dt.find(9));
+        System.out.println(dt.find(666));
+        dt.printAll();
+        System.out.println(dt.removeAt(1));
+        System.out.println(dt.removeAt(0));
+        System.out.println(dt.removeAt(dt.size()-1));
+        dt.printAll();
+        System.out.println("Remove All");
+        dt.removeAll();
+        System.out.println(dt.isEmpty());
     }
 
     private static void OLinkedListTest(){

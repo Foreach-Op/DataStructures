@@ -63,7 +63,7 @@ public class OLinkedList<T> implements OCollection<T>{
     @Override
     public T get(int index) {
         if(index>=size)
-            return null;
+            throw new RuntimeException();
         ONode<T> curr = root;
         for (int i = 0; i < index; i++) {
             curr = curr.next;
@@ -128,7 +128,7 @@ public class OLinkedList<T> implements OCollection<T>{
     @Override
     public T removeAt(int index) {
         if(index>=size)
-            return null;
+            throw new RuntimeException();
         ONode<T> curr = root;
         for (int i = 0; i < index; i++) {
             curr = curr.next;
